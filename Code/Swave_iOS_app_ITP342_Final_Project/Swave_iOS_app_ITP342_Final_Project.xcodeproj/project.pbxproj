@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3743AF33292F3D9400D59298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF32292F3D9400D59298 /* AppDelegate.swift */; };
 		3743AF35292F3D9400D59298 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF34292F3D9400D59298 /* SceneDelegate.swift */; };
-		3743AF37292F3D9400D59298 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF36292F3D9400D59298 /* ViewController.swift */; };
+		3743AF37292F3D9400D59298 /* SignInPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF36292F3D9400D59298 /* SignInPageController.swift */; };
 		3743AF3A292F3D9400D59298 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3743AF38292F3D9400D59298 /* Main.storyboard */; };
 		3743AF3D292F3D9400D59298 /* Swave_iOS_app_ITP342_Final_Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF3B292F3D9400D59298 /* Swave_iOS_app_ITP342_Final_Project.xcdatamodeld */; };
 		3743AF3F292F3D9600D59298 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3743AF3E292F3D9600D59298 /* Assets.xcassets */; };
@@ -17,6 +17,12 @@
 		3743AF4D292F3D9600D59298 /* Swave_iOS_app_ITP342_Final_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF4C292F3D9600D59298 /* Swave_iOS_app_ITP342_Final_ProjectTests.swift */; };
 		3743AF57292F3D9600D59298 /* Swave_iOS_app_ITP342_Final_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF56292F3D9600D59298 /* Swave_iOS_app_ITP342_Final_ProjectUITests.swift */; };
 		3743AF59292F3D9600D59298 /* Swave_iOS_app_ITP342_Final_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF58292F3D9600D59298 /* Swave_iOS_app_ITP342_Final_ProjectUITestsLaunchTests.swift */; };
+		3743AF692935A38800D59298 /* CreateProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF682935A38800D59298 /* CreateProfileController.swift */; };
+		3743AF6A2935A38800D59298 /* CreateProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF682935A38800D59298 /* CreateProfileController.swift */; };
+		3743AF6B2935A38800D59298 /* CreateProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF682935A38800D59298 /* CreateProfileController.swift */; };
+		3743AF6D2935AFD800D59298 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF6C2935AFD800D59298 /* SignUpController.swift */; };
+		3743AF6E2935AFD800D59298 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF6C2935AFD800D59298 /* SignUpController.swift */; };
+		3743AF6F2935AFD800D59298 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF6C2935AFD800D59298 /* SignUpController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +46,7 @@
 		3743AF2F292F3D9400D59298 /* Swave_iOS_app_ITP342_Final_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swave_iOS_app_ITP342_Final_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3743AF32292F3D9400D59298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3743AF34292F3D9400D59298 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3743AF36292F3D9400D59298 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3743AF36292F3D9400D59298 /* SignInPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPageController.swift; sourceTree = "<group>"; };
 		3743AF39292F3D9400D59298 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3743AF3C292F3D9400D59298 /* Swave_iOS_app_ITP342_Final_Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Swave_iOS_app_ITP342_Final_Project.xcdatamodel; sourceTree = "<group>"; };
 		3743AF3E292F3D9600D59298 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +57,8 @@
 		3743AF52292F3D9600D59298 /* Swave_iOS_app_ITP342_Final_ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swave_iOS_app_ITP342_Final_ProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3743AF56292F3D9600D59298 /* Swave_iOS_app_ITP342_Final_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swave_iOS_app_ITP342_Final_ProjectUITests.swift; sourceTree = "<group>"; };
 		3743AF58292F3D9600D59298 /* Swave_iOS_app_ITP342_Final_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swave_iOS_app_ITP342_Final_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3743AF682935A38800D59298 /* CreateProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileController.swift; sourceTree = "<group>"; };
+		3743AF6C2935AFD800D59298 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +111,9 @@
 			children = (
 				3743AF32292F3D9400D59298 /* AppDelegate.swift */,
 				3743AF34292F3D9400D59298 /* SceneDelegate.swift */,
-				3743AF36292F3D9400D59298 /* ViewController.swift */,
-				3743AF38292F3D9400D59298 /* Main.storyboard */,
-				3743AF3E292F3D9600D59298 /* Assets.xcassets */,
-				3743AF40292F3D9600D59298 /* LaunchScreen.storyboard */,
+				3743AF6729359D9A00D59298 /* Model */,
+				3743AF6529359CC500D59298 /* View */,
+				3743AF6629359D2100D59298 /* Controller */,
 				3743AF43292F3D9600D59298 /* Info.plist */,
 				3743AF3B292F3D9400D59298 /* Swave_iOS_app_ITP342_Final_Project.xcdatamodeld */,
 			);
@@ -128,6 +135,33 @@
 				3743AF58292F3D9600D59298 /* Swave_iOS_app_ITP342_Final_ProjectUITestsLaunchTests.swift */,
 			);
 			path = Swave_iOS_app_ITP342_Final_ProjectUITests;
+			sourceTree = "<group>";
+		};
+		3743AF6529359CC500D59298 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3743AF38292F3D9400D59298 /* Main.storyboard */,
+				3743AF40292F3D9600D59298 /* LaunchScreen.storyboard */,
+				3743AF3E292F3D9600D59298 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3743AF6629359D2100D59298 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3743AF36292F3D9400D59298 /* SignInPageController.swift */,
+				3743AF682935A38800D59298 /* CreateProfileController.swift */,
+				3743AF6C2935AFD800D59298 /* SignUpController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3743AF6729359D9A00D59298 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3743AF37292F3D9400D59298 /* ViewController.swift in Sources */,
+				3743AF37292F3D9400D59298 /* SignInPageController.swift in Sources */,
 				3743AF33292F3D9400D59298 /* AppDelegate.swift in Sources */,
 				3743AF35292F3D9400D59298 /* SceneDelegate.swift in Sources */,
 				3743AF3D292F3D9400D59298 /* Swave_iOS_app_ITP342_Final_Project.xcdatamodeld in Sources */,
+				3743AF692935A38800D59298 /* CreateProfileController.swift in Sources */,
+				3743AF6D2935AFD800D59298 /* SignUpController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +309,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3743AF4D292F3D9600D59298 /* Swave_iOS_app_ITP342_Final_ProjectTests.swift in Sources */,
+				3743AF6A2935A38800D59298 /* CreateProfileController.swift in Sources */,
+				3743AF6E2935AFD800D59298 /* SignUpController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +318,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3743AF6B2935A38800D59298 /* CreateProfileController.swift in Sources */,
 				3743AF59292F3D9600D59298 /* Swave_iOS_app_ITP342_Final_ProjectUITestsLaunchTests.swift in Sources */,
 				3743AF57292F3D9600D59298 /* Swave_iOS_app_ITP342_Final_ProjectUITests.swift in Sources */,
+				3743AF6F2935AFD800D59298 /* SignUpController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
