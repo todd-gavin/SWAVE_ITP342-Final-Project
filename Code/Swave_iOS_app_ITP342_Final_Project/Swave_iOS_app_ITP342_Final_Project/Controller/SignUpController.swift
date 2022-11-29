@@ -16,7 +16,7 @@ class SignUpController: UIViewController {
     }
     
     @IBAction func signUpClickedAction(_ sender: UIButton) {
-        print("\(#function)")
+        print("\(#function) pt2")
         self.performSegue (withIdentifier: "navigateToCreateProfile", sender: self)
     }
     

@@ -9,9 +9,16 @@ import UIKit
 
 class CreateProfileController: UIViewController {
 
+    @IBOutlet weak var userInformationUIViewOutlet: UIView!
+    @IBOutlet weak var primaryLocationUIViewOutlet: UIView!
+    @IBOutlet weak var surferInformationUIViewOutlet: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        userInformationUIViewOutlet.layer.cornerRadius = 10
+        primaryLocationUIViewOutlet.layer.cornerRadius = 10
+        surferInformationUIViewOutlet.layer.cornerRadius = 10
+        
         // Do any additional setup after loading the view.
     }
     

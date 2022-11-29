@@ -28,7 +28,7 @@ class SignInPageController: UIViewController {
     }
     
     @IBAction func signUpClickedAction(_ sender: UIButton) {
-        print("\(#function)")
+        print("\(#function) pt1")
         self.performSegue (withIdentifier: "navigateToSignUp", sender: self)
     }
     
