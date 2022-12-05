@@ -22,6 +22,12 @@
 		37300336293C27B300FDCE51 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37300335293C27B300FDCE51 /* UserModel.swift */; };
 		37300337293C27B300FDCE51 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37300335293C27B300FDCE51 /* UserModel.swift */; };
 		37300338293C27B300FDCE51 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37300335293C27B300FDCE51 /* UserModel.swift */; };
+		3730033A293D5D1300FDCE51 /* SurfForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37300339293D5D1300FDCE51 /* SurfForecast.swift */; };
+		3730033B293D5D1300FDCE51 /* SurfForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37300339293D5D1300FDCE51 /* SurfForecast.swift */; };
+		3730033C293D5D1300FDCE51 /* SurfForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37300339293D5D1300FDCE51 /* SurfForecast.swift */; };
+		3730033E293D5E5500FDCE51 /* SurfForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730033D293D5E5500FDCE51 /* SurfForecastModel.swift */; };
+		3730033F293D5E5500FDCE51 /* SurfForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730033D293D5E5500FDCE51 /* SurfForecastModel.swift */; };
+		37300340293D5E5500FDCE51 /* SurfForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3730033D293D5E5500FDCE51 /* SurfForecastModel.swift */; };
 		3743AF33292F3D9400D59298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF32292F3D9400D59298 /* AppDelegate.swift */; };
 		3743AF35292F3D9400D59298 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF34292F3D9400D59298 /* SceneDelegate.swift */; };
 		3743AF37292F3D9400D59298 /* SignInPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743AF36292F3D9400D59298 /* SignInPageController.swift */; };
@@ -77,6 +83,8 @@
 		37300326293C12B900FDCE51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37300331293C26AA00FDCE51 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		37300335293C27B300FDCE51 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		37300339293D5D1300FDCE51 /* SurfForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfForecast.swift; sourceTree = "<group>"; };
+		3730033D293D5E5500FDCE51 /* SurfForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfForecastModel.swift; sourceTree = "<group>"; };
 		3743AF2F292F3D9400D59298 /* Swave_iOS_app_ITP342_Final_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swave_iOS_app_ITP342_Final_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3743AF32292F3D9400D59298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3743AF34292F3D9400D59298 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +219,8 @@
 			children = (
 				37300331293C26AA00FDCE51 /* User.swift */,
 				37300335293C27B300FDCE51 /* UserModel.swift */,
+				37300339293D5D1300FDCE51 /* SurfForecast.swift */,
+				3730033D293D5E5500FDCE51 /* SurfForecastModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -367,6 +377,8 @@
 				3743AF33292F3D9400D59298 /* AppDelegate.swift in Sources */,
 				3743AF35292F3D9400D59298 /* SceneDelegate.swift in Sources */,
 				3743AF712936E3DA00D59298 /* ProfileController.swift in Sources */,
+				3730033E293D5E5500FDCE51 /* SurfForecastModel.swift in Sources */,
+				3730033A293D5D1300FDCE51 /* SurfForecast.swift in Sources */,
 				3743AF7929381CC500D59298 /* SurfController.swift in Sources */,
 				3743AF3D292F3D9400D59298 /* Swave_iOS_app_ITP342_Final_Project.xcdatamodeld in Sources */,
 				3743AF692935A38800D59298 /* CreateProfileController.swift in Sources */,
@@ -382,9 +394,11 @@
 				3743AF4D292F3D9600D59298 /* Swave_iOS_app_ITP342_Final_ProjectTests.swift in Sources */,
 				3743AF7629381A9700D59298 /* EditProfileController.swift in Sources */,
 				3743AF6A2935A38800D59298 /* CreateProfileController.swift in Sources */,
+				3730033B293D5D1300FDCE51 /* SurfForecast.swift in Sources */,
 				37300337293C27B300FDCE51 /* UserModel.swift in Sources */,
 				3743AF6E2935AFD800D59298 /* SignUpController.swift in Sources */,
 				375F0F2B293843B10095F278 /* AccountCreationController.swift in Sources */,
+				3730033F293D5E5500FDCE51 /* SurfForecastModel.swift in Sources */,
 				3743AF722936E3DA00D59298 /* ProfileController.swift in Sources */,
 				375F0F2F29384B470095F278 /* HomeTabBarController.swift in Sources */,
 				37300324293948ED00FDCE51 /* SurfMatchingController.swift in Sources */,
@@ -396,6 +410,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37300340293D5E5500FDCE51 /* SurfForecastModel.swift in Sources */,
+				3730033C293D5D1300FDCE51 /* SurfForecast.swift in Sources */,
 				375F0F2C293843B10095F278 /* AccountCreationController.swift in Sources */,
 				3743AF6B2935A38800D59298 /* CreateProfileController.swift in Sources */,
 				37300338293C27B300FDCE51 /* UserModel.swift in Sources */,

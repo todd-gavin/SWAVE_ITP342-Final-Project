@@ -35,7 +35,6 @@ class ProfileController: UIViewController {
         surferLevelViewOutlet.layer.cornerRadius = 10
         boardTypeViewOutlet.layer.cornerRadius = 10
         locationViewOutlet.layer.cornerRadius = 10
-//        self.navigationItem.setHidesBackButton(true, animated: true)
         updateProfileUI()
         print("\(#function) Profile Page")
         // Do any additional setup after loading the view.

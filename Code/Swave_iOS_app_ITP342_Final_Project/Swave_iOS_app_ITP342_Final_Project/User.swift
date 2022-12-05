@@ -18,7 +18,4 @@ struct User {
     public var surf_status: Int
     public var primary_location_lat: Float
     public var primary_location_long: Float
-    
-//    private var email: String
-//    private var password: String
 }
