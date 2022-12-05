@@ -586,6 +586,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Swave_iOS_app_ITP342_Final_Project/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SWAVE;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need it to pull the accurate surf forecast data.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need it to pull the accurate surf forecast data.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -618,6 +620,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Swave_iOS_app_ITP342_Final_Project/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SWAVE;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need it to pull the accurate surf forecast data.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need it to pull the accurate surf forecast data.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

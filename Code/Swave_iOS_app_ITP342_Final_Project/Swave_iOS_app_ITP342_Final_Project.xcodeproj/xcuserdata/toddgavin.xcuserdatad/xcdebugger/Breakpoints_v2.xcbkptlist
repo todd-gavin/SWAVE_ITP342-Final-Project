@@ -14,8 +14,8 @@
             filePath = "Swave_iOS_app_ITP342_Final_Project/Controller/SurfController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "251"
-            endingLineNumber = "251"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
             landmarkName = "updateSurfForecastModelSingleton(jsonRepsonse:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "Swave_iOS_app_ITP342_Final_Project/Controller/SurfController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
             landmarkName = "updateSurfForecastModelSingleton(jsonRepsonse:)"
             landmarkType = "7">
          </BreakpointContent>

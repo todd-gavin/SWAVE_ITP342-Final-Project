@@ -8,8 +8,9 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import CoreLocation
 
-class CreateProfileController: UIViewController {
+class CreateProfileController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var userInformationUIViewOutlet: UIView!
     @IBOutlet weak var primaryLocationUIViewOutlet: UIView!
@@ -30,6 +31,8 @@ class CreateProfileController: UIViewController {
     
     var user_age = 18
     
+    let locationManager = CLLocationManager()
+    
     private var userModel = UserModel.sharedInstance
     
     override func viewDidLoad() {
@@ -37,8 +40,49 @@ class CreateProfileController: UIViewController {
         userInformationUIViewOutlet.layer.cornerRadius = 10
         primaryLocationUIViewOutlet.layer.cornerRadius = 10
         surferInformationUIViewOutlet.layer.cornerRadius = 10
+        
+        // For demo purposes only!!!
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest // in meters
+          
+        // Notify us every 100th meters since last location update
+        locationManager.distanceFilter = 100
+        
+        locationManager.delegate = self
+        
         print("\(#function) Create Profile Page")
         // Do any additional setup after loading the view.
+    }
+    
+    func getCurrentLocation() {
+
+        // Asking for permissions to access location
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error with retrieving location: \(error)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if let location = locations.first {
+            print("First location: \(String(describing: locations.first))")
+            let lat = location.coordinate.latitude
+            let lng = location.coordinate.longitude
+            print("The user current location is \(lat),\(lng)")
+            
+            userModel.setLocationLat(lat: lat)
+            userModel.setLocationLong(long: lng)
+            
+            latOutlet.text = String(userModel.getLocationLat())
+            longOutlet.text = String(userModel.getLocationLong())
+            
+        }
+        
     }
     
     func validateProfileParameters() -> Bool {
@@ -54,8 +98,8 @@ class CreateProfileController: UIViewController {
         userModel.setUsername(username: usernameOutlet.text!)
         userModel.setShortBio(bio: shortBioOutlet.text!)
         userModel.setAge(age: self.user_age)
-        userModel.setLocationLat(lat: 0)
-        userModel.setLocationLong(long: 0)
+//        userModel.setLocationLat(lat: 0)
+//        userModel.setLocationLong(long: 0)
         userModel.setExperienceLevel(level: experienceLevelOutlet.selectedSegmentIndex)
         userModel.setSurfboardType(board: boardTypeOutlet.selectedSegmentIndex)
         userModel.setSurfStatus(status: surfStatusOutlet.selectedSegmentIndex)
@@ -73,6 +117,10 @@ class CreateProfileController: UIViewController {
                      "board_type":userModel.getSurfboardType(),
                      "surf_status":userModel.getSurfStatus()
                     ])
+    }
+    
+    @IBAction func getCurrentLocationClickedAction(_ sender: UIButton) {
+        getCurrentLocation()
     }
     
     @IBAction func ageSliderAction(_ sender: UISlider) {

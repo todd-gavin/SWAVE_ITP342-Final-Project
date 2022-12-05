@@ -45,7 +45,31 @@ struct Data: Decodable {
 }
 
 class SurfController: UIViewController {
-
+    
+    @IBOutlet weak var latOutlet: UILabel!
+    @IBOutlet weak var longOutlet: UILabel!
+    
+    @IBOutlet weak var dateTime1Outlet: UILabel!
+    @IBOutlet weak var seaLevel1Outlet: UILabel!
+    @IBOutlet weak var waterTemp1Outlet: UILabel!
+    @IBOutlet weak var waveDirection1Outlet: UILabel!
+    @IBOutlet weak var waveHeight1Outlet: UILabel!
+    @IBOutlet weak var wavePeriod1Outlet: UILabel!
+    
+    @IBOutlet weak var dateTime2Outlet: UILabel!
+    @IBOutlet weak var seaLevel2Outlet: UILabel!
+    @IBOutlet weak var waterTemp2Outlet: UILabel!
+    @IBOutlet weak var waveDirection2Outlet: UILabel!
+    @IBOutlet weak var waveHeight2Outlet: UILabel!
+    @IBOutlet weak var wavePeriod2Outlet: UILabel!
+    
+    @IBOutlet weak var dateTime3Outlet: UILabel!
+    @IBOutlet weak var seaLevel3Outlet: UILabel!
+    @IBOutlet weak var waterTemp3Outlet: UILabel!
+    @IBOutlet weak var waveDirection3Outlet: UILabel!
+    @IBOutlet weak var waveHeight3Outlet: UILabel!
+    @IBOutlet weak var wavePeriod3Outlet: UILabel!
+    
     private var userModel = UserModel.sharedInstance
     private var surfForecastModel = SurfForecastModel.sharedInstance
 
@@ -60,6 +84,18 @@ class SurfController: UIViewController {
         callStormglassAPI(lat: "34.028678", long: "-118.285705", startDateTime: startDateTime, endDateTime: endDateTime)
 
     }
+    
+    
+    @IBAction func loadClickedAction(_ sender: UIButton) {
+        updateUI()
+    }
+    
+    
+    @IBAction func surfMapClickedAction(_ sender: UIButton) {
+        
+        self.performSegue (withIdentifier: "navigateToSurfMap", sender: self)
+    }
+    
     
     func convertISOtoReadableTime(time: String) -> String {
         
@@ -115,7 +151,9 @@ class SurfController: UIViewController {
         var urlComponents = URLComponents(string: "https://api.stormglass.io/v2/weather/point?")!
 
 //        let API_KEY = String("0dcf4c2e-70e9-11ed-a654-0242ac130002-0dcf4c92-70e9-11ed-a654-0242ac130002")
-        let API_KEY = String("b574ba82-743f-11ed-bce5-0242ac130002-b574bb4a-743f-11ed-bce5-0242ac130002")
+//        let API_KEY = String("b574ba82-743f-11ed-bce5-0242ac130002-b574bb4a-743f-11ed-bce5-0242ac130002")
+        let API_KEY = String("dfc9cdc4-744c-11ed-bc36-0242ac130002-dfc9ce32-744c-11ed-bc36-0242ac130002")
+        
 
         let params = "seaLevel,waterTemperature,waveDirection,waveHeight,wavePeriod"
 
@@ -166,9 +204,11 @@ class SurfController: UIViewController {
                 print(json)
                 
                 self.updateSurfForecastModelSingleton(jsonRepsonse: json)
+                
             } catch {
                 print(error)
             }
+            
         }.resume()
 
     }
@@ -247,6 +287,8 @@ class SurfController: UIViewController {
                 print("Params:\n\(time1!)\(time2!)\(time3!)\n\(seaLevel1)\(seaLevel2)\(seaLevel3)\n\(waterTemperature1)\(waterTemperature2)\(waterTemperature3)\n\(waveDirection1)\(waveDirection2)\(waveDirection3)\n\(waveHeight1)\(waveHeight2)\(waveHeight3)\n\(wavePeriod1)\(wavePeriod2)\(wavePeriod3)\n")
                 
                 surfForecastModel.addSurfForecast(dateTimes1: time1!, dateTimes2: time2!, dateTimes3: time3!, seaLevel1: seaLevel1, seaLevel2: seaLevel2, seaLevel3: seaLevel3, waterTemperature1: waterTemperature1, waterTemperature2: waterTemperature2, waterTemperature3: waterTemperature3, waveDirection1: waveDirection1, waveDirection2: waveDirection2, waveDirection3: waveDirection3, waveHeight1: waveHeight1, waveHeight2: waveHeight2, waveHeight3: waveHeight3, wavePeriod1: wavePeriod1, wavePeriod2: wavePeriod2, wavePeriod3: wavePeriod3, at: 0)
+                
+//                self.updateUI()
 
             }
         }
@@ -257,8 +299,37 @@ class SurfController: UIViewController {
     
     func updateUI() {
         
+        let forecast = surfForecastModel.getCurrentSurfForecast()
         
-        
+        if forecast.getDateTimes()[0] != "" {
+            
+            dateTime1Outlet.text = forecast.getDateTimes()[0]
+            seaLevel1Outlet.text = forecast.getSeaLevel()[0]
+            waterTemp1Outlet.text = forecast.getWaterTemperature()[0]
+            waveDirection1Outlet.text = forecast.getWaveDirection()[0]
+            waveHeight1Outlet.text = forecast.getWaveHeight()[0]
+            wavePeriod1Outlet.text = forecast.getWavePeriod()[0]
+            
+            dateTime2Outlet.text = forecast.getDateTimes()[1]
+            seaLevel2Outlet.text = forecast.getSeaLevel()[1]
+            waterTemp2Outlet.text = forecast.getWaterTemperature()[1]
+            waveDirection2Outlet.text = forecast.getWaveDirection()[1]
+            waveHeight2Outlet.text = forecast.getWaveHeight()[1]
+            wavePeriod2Outlet.text = forecast.getWavePeriod()[1]
+            
+            dateTime3Outlet.text = forecast.getDateTimes()[2]
+            seaLevel3Outlet.text = forecast.getSeaLevel()[2]
+            waterTemp3Outlet.text = forecast.getWaterTemperature()[2]
+            waveDirection3Outlet.text = forecast.getWaveDirection()[2]
+            waveHeight3Outlet.text = forecast.getWaveHeight()[2]
+            wavePeriod3Outlet.text = forecast.getWavePeriod()[2]
+            
+            latOutlet.text = String(userModel.getLocationLat())
+            longOutlet.text = String(userModel.getLocationLong())
+            
+            print("Surf Weather UI Updated")
+            
+        }
     }
-
+    
 }

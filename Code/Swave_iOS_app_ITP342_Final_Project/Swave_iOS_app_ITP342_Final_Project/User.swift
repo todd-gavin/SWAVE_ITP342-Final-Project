@@ -16,6 +16,6 @@ struct User {
     public var experience_level: Int
     public var surboard_type: Int
     public var surf_status: Int
-    public var primary_location_lat: Float
-    public var primary_location_long: Float
+    public var primary_location_lat: Double
+    public var primary_location_long: Double
 }

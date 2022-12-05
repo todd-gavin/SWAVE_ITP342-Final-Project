@@ -62,12 +62,12 @@ class UserModel: NSObject {
         print("Succesfully changed surf_status to: \(user.surf_status)")
     }
     
-    func setLocationLat(lat: Float) {
+    func setLocationLat(lat: Double) {
         user.primary_location_lat = lat
         print("Succesfully changed primary_location_lat to: \(user.primary_location_lat)")
     }
     
-    func setLocationLong(long: Float) {
+    func setLocationLong(long: Double) {
         user.primary_location_long = long
         print("Succesfully changed primary_location_long to: \(user.primary_location_long)")
     }
@@ -123,12 +123,12 @@ class UserModel: NSObject {
         return user.surf_status
     }
     
-    func getLocationLat() -> Float {
+    func getLocationLat() -> Double {
         print("Getting primary_location_lat: \(user.primary_location_lat)")
         return user.primary_location_lat
     }
     
-    func getLocationLong() -> Float {
+    func getLocationLong() -> Double {
         print("Getting primary_location_long: \(user.primary_location_long)")
         return user.primary_location_long
     }
