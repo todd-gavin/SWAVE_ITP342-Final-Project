@@ -40,6 +40,11 @@ class ProfileController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        updateProfileUI()
+        print("\(#function)")
+    }
+    
     func updateProfileUI() {
         fullNameOutlet.text = userModel.getFullName()
         usernameOutlet.text = userModel.getUsername()

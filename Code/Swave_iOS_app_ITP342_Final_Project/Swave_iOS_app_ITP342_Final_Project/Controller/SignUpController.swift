@@ -22,6 +22,10 @@ class SignUpController: UIViewController {
         print("\(userModel.getAllUserInfoLocal())")
     }
     
+    @IBAction func backClickedAction(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func signUpClickedAction(_ sender: UIButton) {
         print("\(#function) pt2")
         

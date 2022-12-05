@@ -10,40 +10,6 @@ import FirebaseFirestore
 import FirebaseAuth
 import Foundation
 
-struct SeaLevel: Decodable {
-    let sg: String
-}
-
-struct WaterTemperature: Decodable {
-    let sg: String
-}
-
-struct WaveDirection: Decodable {
-    let sg: String
-}
-
-struct WaveHeight: Decodable {
-    let sg: String
-}
-
-struct WavePeriod: Decodable {
-    let sg: String
-}
-
-struct HourlyData: Decodable {
-  let seaLevel: SeaLevel
-  let time: String
-  let waterTemperature: WaterTemperature
-  let waveDirection: WaveDirection
-  let waveHeight: WaveHeight
-  let wavePeriod: WavePeriod
-}
-
-struct Data: Decodable {
-    let hours: [HourlyData]
-//    let meta: [String: Any]
-}
-
 class SurfController: UIViewController {
     
     @IBOutlet weak var latOutlet: UILabel!
@@ -81,18 +47,23 @@ class SurfController: UIViewController {
         let endDateTime = getEndDateTime(startDateTime: startDateTime)
         let lat = userModel.getLocationLat()
         let long = userModel.getLocationLong()
-        callStormglassAPI(lat: "34.028678", long: "-118.285705", startDateTime: startDateTime, endDateTime: endDateTime)
+        callStormglassAPI(lat: String(lat), long: String(long), startDateTime: startDateTime, endDateTime: endDateTime)
 
     }
     
     
     @IBAction func loadClickedAction(_ sender: UIButton) {
-        updateUI()
+        print("\(#function)")
+        let startDateTime = getCurrentDataTime()
+        let endDateTime = getEndDateTime(startDateTime: startDateTime)
+        let lat = userModel.getLocationLat()
+        let long = userModel.getLocationLong()
+        callStormglassAPI(lat: String(lat), long: String(long), startDateTime: startDateTime, endDateTime: endDateTime)
     }
     
     
     @IBAction func surfMapClickedAction(_ sender: UIButton) {
-        
+        print("\(#function)")
         self.performSegue (withIdentifier: "navigateToSurfMap", sender: self)
     }
     
@@ -202,8 +173,11 @@ class SurfController: UIViewController {
 
                 // Use the JSON object here
                 print(json)
-                
-                self.updateSurfForecastModelSingleton(jsonRepsonse: json)
+                DispatchQueue.main.async {
+                    self.updateSurfForecastModelSingleton(jsonRepsonse: json)
+                    
+                    self.updateUI()
+                }
                 
             } catch {
                 print(error)
@@ -292,7 +266,6 @@ class SurfController: UIViewController {
 
             }
         }
-
     }
     
     // 2. Update UI from data inside the SurfForecastModel Singleton
@@ -331,5 +304,4 @@ class SurfController: UIViewController {
             
         }
     }
-    
 }

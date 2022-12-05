@@ -8,8 +8,9 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
+import CoreLocation
 
-class EditProfileController: UIViewController {
+class EditProfileController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var userInformationUIViewOutlet: UIView!
     @IBOutlet weak var primaryLocationUIViewOutlet: UIView!
@@ -29,6 +30,8 @@ class EditProfileController: UIViewController {
     
     var user_age = 18
     
+    let locationManager = CLLocationManager()
+    
     private var userModel = UserModel.sharedInstance
     
     override func viewDidLoad() {
@@ -36,8 +39,47 @@ class EditProfileController: UIViewController {
         userInformationUIViewOutlet.layer.cornerRadius = 10
         primaryLocationUIViewOutlet.layer.cornerRadius = 10
         surferInformationUIViewOutlet.layer.cornerRadius = 10
+        
+        // For demo purposes only!!!
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest // in meters
+          
+        // Notify us every 100th meters since last location update
+        locationManager.distanceFilter = 100
+        
+        locationManager.delegate = self
+        
         print("\(#function) Edit Profile Page")
         // Do any additional setup after loading the view.
+    }
+    
+    func getCurrentLocation() {
+
+        // Asking for permissions to access location
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error with retrieving location: \(error)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if let location = locations.first {
+            print("First location: \(String(describing: locations.first))")
+            let lat = location.coordinate.latitude
+            let lng = location.coordinate.longitude
+            print("The user current location is \(lat),\(lng)")
+            
+            userModel.setLocationLat(lat: lat)
+            userModel.setLocationLong(long: lng)
+            
+            latOutlet.text = String(userModel.getLocationLat())
+            longOutlet.text = String(userModel.getLocationLong())
+            
+        }
+        
     }
     
     func validateProfileParameters() -> Bool {
@@ -111,15 +153,8 @@ class EditProfileController: UIViewController {
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func getCurrentLocationClickedAction(_ sender: UIButton) {
+        getCurrentLocation()
     }
-    */
 
 }

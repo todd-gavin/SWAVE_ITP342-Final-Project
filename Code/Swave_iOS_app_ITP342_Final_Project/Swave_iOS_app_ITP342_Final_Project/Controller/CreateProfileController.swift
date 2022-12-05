@@ -59,8 +59,6 @@ class CreateProfileController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         
-        
-        
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -98,8 +96,6 @@ class CreateProfileController: UIViewController, CLLocationManagerDelegate {
         userModel.setUsername(username: usernameOutlet.text!)
         userModel.setShortBio(bio: shortBioOutlet.text!)
         userModel.setAge(age: self.user_age)
-//        userModel.setLocationLat(lat: 0)
-//        userModel.setLocationLong(long: 0)
         userModel.setExperienceLevel(level: experienceLevelOutlet.selectedSegmentIndex)
         userModel.setSurfboardType(board: boardTypeOutlet.selectedSegmentIndex)
         userModel.setSurfStatus(status: surfStatusOutlet.selectedSegmentIndex)
@@ -170,4 +166,9 @@ class CreateProfileController: UIViewController, CLLocationManagerDelegate {
         }
         
     }
+    
+    @IBAction func backClickedAction(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

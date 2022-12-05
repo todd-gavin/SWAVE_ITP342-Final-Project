@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AIM-Wk-Aab">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yhh-Wa-stm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="sBS-9Q-vuu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Swave Logo" translatesAutoresizingMaskIntoConstraints="NO" id="sBS-9Q-vuu">
                                 <rect key="frame" x="50" y="81" width="314" height="159"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MFw-PA-i8h">
@@ -47,7 +47,13 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z7F-aQ-1nF">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
-                                    <navigationItem title="Sign Up" id="T6M-jx-oCD"/>
+                                    <navigationItem title="Sign Up" id="T6M-jx-oCD">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Ich-80-pqG">
+                                            <connections>
+                                                <action selector="backClickedAction:" destination="jDm-Hn-FQY" id="xeh-Nc-JlF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwO-5h-xII">
@@ -275,7 +281,13 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mb-Bi-X76">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
-                                    <navigationItem title="Create Profile" id="mZf-Pa-cUA"/>
+                                    <navigationItem title="Create Profile" id="mZf-Pa-cUA">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="1rG-8h-ZOn">
+                                            <connections>
+                                                <action selector="backClickedAction:" destination="BYZ-38-t0r" id="Oup-hf-Pkg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmC-Pq-N1T">
@@ -335,10 +347,10 @@
             </objects>
             <point key="canvasLocation" x="3409" y="-263"/>
         </scene>
-        <!--Account Creation Controller-->
+        <!--View Controller-->
         <scene sceneID="sZJ-PJ-fHk">
             <objects>
-                <viewController id="dDv-FK-SJh" customClass="AccountCreationController" customModule="Swave_iOS_app_ITP342_Final_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dDv-FK-SJh" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6m8-34-XfF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -390,7 +402,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="6H1-qb-0qT">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Swave Logo" translatesAutoresizingMaskIntoConstraints="NO" id="6H1-qb-0qT">
                                 <rect key="frame" x="50" y="73" width="314" height="159"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aAB-rq-YXh">
@@ -498,9 +510,6 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Create Surf Event"/>
-                                <connections>
-                                    <action selector="startMatchingClickedAction:" destination="Yhh-Wa-stm" eventType="touchUpInside" id="Zsq-s0-hYK"/>
-                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L8G-O2-QOg">
                                 <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -870,7 +879,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Surf Map"/>
                                 <connections>
-                                    <action selector="startMatchingClickedAction:" destination="Yhh-Wa-stm" eventType="touchUpInside" id="GBS-yU-G8v"/>
                                     <action selector="surfMapClickedAction:" destination="Yhh-Wa-stm" eventType="touchUpInside" id="L5A-hO-1Cm"/>
                                 </connections>
                             </button>
@@ -931,12 +939,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YOV-6b-Q5J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5747.826086956522" y="124.55357142857142"/>
+            <point key="canvasLocation" x="5748" y="-263"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="4tk-OF-axJ">
             <objects>
-                <viewController id="4tV-Ze-VZ8" sceneMemberID="viewController">
+                <viewController id="4tV-Ze-VZ8" customClass="MapViewController" customModule="Swave_iOS_app_ITP342_Final_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XQf-qJ-1Of">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -949,7 +957,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="Surf Map" id="bMV-3q-9JT">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="LWi-gv-Uhi"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="LWi-gv-Uhi">
+                                            <connections>
+                                                <action selector="backClickedAction:" destination="4tV-Ze-VZ8" id="tvT-Qm-6bf"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -990,10 +1002,15 @@
                             <constraint firstAttribute="trailing" secondItem="s4F-ew-9oy" secondAttribute="trailing" id="ygO-eZ-z1Y"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="latOutlet" destination="jwt-ef-yhM" id="IEN-ra-2bh"/>
+                        <outlet property="longOutlet" destination="gmW-Hg-g2T" id="HBH-Sr-PRT"/>
+                        <outlet property="mapViewOutlet" destination="OYx-Ng-zgH" id="RA6-I6-Tsr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrh-9N-arv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6584" y="125"/>
+            <point key="canvasLocation" x="6583" y="-263"/>
         </scene>
         <!--Profile-->
         <scene sceneID="GyR-pu-pVb">
@@ -1241,7 +1258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flz-2o-Jba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5747.826086956522" y="-565.17857142857144"/>
+            <point key="canvasLocation" x="5748" y="-953"/>
         </scene>
         <!--Edit Profile Controller-->
         <scene sceneID="XEQ-lz-Zxx">
@@ -1342,6 +1359,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Get Current Location"/>
+                                        <connections>
+                                            <action selector="getCurrentLocationClickedAction:" destination="LOB-6F-s7o" eventType="touchUpInside" id="eis-IQ-XuC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1473,7 +1493,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bC-fc-Z0s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6600.0000000000009" y="-565.17857142857144"/>
+            <point key="canvasLocation" x="6600" y="-953"/>
         </scene>
         <!--Home Tab Bar Controller-->
         <scene sceneID="VPV-9h-2Tj">
@@ -1496,10 +1516,10 @@
             </objects>
             <point key="canvasLocation" x="4186.9565217391309" y="-263.16964285714283"/>
         </scene>
-        <!--Surf Matching Controller-->
+        <!--View Controller-->
         <scene sceneID="L6h-6E-qMD">
             <objects>
-                <viewController id="cdf-eO-Pu6" customClass="SurfMatchingController" customModule="Swave_iOS_app_ITP342_Final_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cdf-eO-Pu6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eV4-HH-9Ef">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1686,7 +1706,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyO-Sk-Pr2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8893" y="153"/>
+            <point key="canvasLocation" x="9214" y="-1311"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1uC-Lw-hv4">
@@ -1720,7 +1740,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SdF-WD-1F9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7454" y="125"/>
+            <point key="canvasLocation" x="9933" y="-1311"/>
         </scene>
         <!--Surf Events-->
         <scene sceneID="ASz-MW-Ldu">
@@ -1749,7 +1769,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sF6-gR-j9e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6600" y="1270"/>
+            <point key="canvasLocation" x="6600" y="476"/>
         </scene>
         <!--Surf Events-->
         <scene sceneID="Sve-31-4zt">
@@ -1767,7 +1787,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s1S-Gv-nHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5748" y="1270"/>
+            <point key="canvasLocation" x="5748" y="476"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bdI-GF-PWe">
@@ -1958,10 +1978,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="2Vk-UG-Cp0"/>
         <segue reference="ooC-iA-mhe"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Image" width="631" height="159"/>
+        <image name="Swave Logo" width="631" height="159"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="figure.surfing" catalog="system" width="128" height="119"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
