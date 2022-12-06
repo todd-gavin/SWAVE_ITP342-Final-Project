@@ -94,8 +94,6 @@ class EditProfileController: UIViewController, CLLocationManagerDelegate {
         userModel.setFullName(name: fullNameOutlet.text!)
         userModel.setShortBio(bio: shortBioOutlet.text!)
         userModel.setAge(age: self.user_age)
-        userModel.setLocationLat(lat: 0)
-        userModel.setLocationLong(long: 0)
         userModel.setExperienceLevel(level: experienceLevelOutlet.selectedSegmentIndex)
         userModel.setSurfboardType(board: boardTypeOutlet.selectedSegmentIndex)
         userModel.setSurfStatus(status: surfStatusOutlet.selectedSegmentIndex)

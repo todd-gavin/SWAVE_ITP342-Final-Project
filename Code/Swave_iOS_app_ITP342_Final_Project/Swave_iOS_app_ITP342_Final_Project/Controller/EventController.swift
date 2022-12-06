@@ -10,6 +10,9 @@ import EventKit
 
 class EventController: UIViewController {
     
+    @IBOutlet weak var latOutlet: UILabel!
+    @IBOutlet weak var longOutlet: UILabel!
+    
     @IBOutlet weak var titleOutlet: UITextField!
     @IBOutlet weak var dayOutlet: UISegmentedControl!
     @IBOutlet weak var timeOfDayOutlet: UISegmentedControl!
@@ -19,19 +22,19 @@ class EventController: UIViewController {
     let eventStore = EKEventStore()
     
     private var userModel = UserModel.sharedInstance
+    private var eventStorage = EKEventStorageModel.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        latOutlet.text = String(userModel.getLocationLat())
+        longOutlet.text = String(userModel.getLocationLong())
         print("\(#function) Event Controller Page")
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func backClickedAction(_ sender: UIBarButtonItem) {
         print("\(#function)")
         self.dismiss(animated: true, completion: nil)
     }
-    
     
     @IBAction func createCalendarEventClickedAction(_ sender: UIButton) {
         print("\(#function)")
@@ -50,6 +53,12 @@ class EventController: UIViewController {
             requestCalendarAccess()
 //            let events = readCalendarEvents()
 //            printCalendarEvents(events: events)
+//            titleOutlet.text = ""
+//            dayOutlet.selectedSegmentIndex = 0
+//            timeOfDayOutlet.selectedSegmentIndex = 0
+//            eventLengthOutlet.selectedSegmentIndex = 0
+//            notesOutlet.text = ""
+            
         }
         
     }
@@ -170,6 +179,8 @@ class EventController: UIViewController {
         do {
             try eventStore.save(newEvent, span: .thisEvent)
             print("Event WAS created and saved.")
+            
+            eventStorage.addEventToStorage(event: [eventInfo[0], eventInfo[2]])
             
             let start = dateToString(date: startDate)
             let end = dateToString(date: endDate)

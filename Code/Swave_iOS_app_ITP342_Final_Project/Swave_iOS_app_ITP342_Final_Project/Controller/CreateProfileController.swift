@@ -154,6 +154,7 @@ class CreateProfileController: UIViewController, CLLocationManagerDelegate {
             })
             
         } else {
+            
             let alert = UIAlertController(title: "", message: "Please fill in all profile fields.", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in

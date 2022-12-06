@@ -61,7 +61,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         print("\(#function)")
         if annotation is MKUserLocation {
             let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "userLocation")
-            annotationView.image = UIImage(named: "MapKit Annotation")
+            annotationView.image = UIImage(named: "MapKitAnnotation")
             return annotationView
         }
         return nil

@@ -1138,6 +1138,8 @@
                     <connections>
                         <outlet property="dayOutlet" destination="C12-kr-4TI" id="TOa-YJ-Rbi"/>
                         <outlet property="eventLengthOutlet" destination="ehY-Ev-3Sf" id="QMM-Ip-2LX"/>
+                        <outlet property="latOutlet" destination="MWA-oe-NHm" id="oSK-4u-sgm"/>
+                        <outlet property="longOutlet" destination="cTl-qE-7pe" id="sps-am-Qm7"/>
                         <outlet property="notesOutlet" destination="QAB-4t-rWY" id="4PX-dx-p2j"/>
                         <outlet property="timeOfDayOutlet" destination="UkF-hX-l0j" id="ydC-3h-PG2"/>
                         <outlet property="titleOutlet" destination="V0r-1h-iaw" id="MmN-pW-eHr"/>
@@ -1387,7 +1389,7 @@
                         <outlet property="surfStatusOutlet" destination="Dal-ky-was" id="lbU-FN-mNq"/>
                         <outlet property="surferLevelViewOutlet" destination="tqe-Ov-Iul" id="k5G-1o-tRo"/>
                         <outlet property="usernameOutlet" destination="EpG-E9-Lfy" id="QS3-xZ-u8r"/>
-                        <segue destination="LOB-6F-s7o" kind="presentation" identifier="navigateToEditProfile" id="Tns-C4-cAw"/>
+                        <segue destination="LOB-6F-s7o" kind="presentation" identifier="navigateToEditProfile" modalPresentationStyle="fullScreen" id="Tns-C4-cAw"/>
                         <segue destination="AIM-Wk-Aab" kind="presentation" identifier="navigateBackToSignInPage" modalPresentationStyle="fullScreen" id="2Vk-UG-Cp0"/>
                     </connections>
                 </viewController>
@@ -1400,11 +1402,11 @@
             <objects>
                 <viewController id="LOB-6F-s7o" customClass="EditProfileController" customModule="Swave_iOS_app_ITP342_Final_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mtk-8T-MYM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OkO-rs-YqK">
-                                <rect key="frame" x="30" y="86" width="354" height="189"/>
+                                <rect key="frame" x="30" y="124" width="354" height="189"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y2P-ii-2NL">
                                         <rect key="frame" x="20" y="51" width="314" height="34"/>
@@ -1465,7 +1467,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIi-Ag-Sg6">
-                                <rect key="frame" x="30" y="295" width="354" height="147"/>
+                                <rect key="frame" x="30" y="333" width="354" height="147"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ac0-PS-1IE">
                                         <rect key="frame" x="20" y="51" width="24" height="21"/>
@@ -1514,7 +1516,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffz-p6-pa4">
-                                <rect key="frame" x="30" y="462" width="354" height="193"/>
+                                <rect key="frame" x="30" y="500" width="354" height="193"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1H1-b4-h3m">
                                         <rect key="frame" x="20" y="51" width="314" height="32"/>
@@ -1564,7 +1566,7 @@
                                 </constraints>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Z3-Fa-csd">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Edit Profile" id="MoF-D2-Mdi">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="52o-0M-4Yc">
@@ -1576,7 +1578,7 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKQ-PP-ttL">
-                                <rect key="frame" x="50" y="754" width="314" height="50"/>
+                                <rect key="frame" x="50" y="778" width="314" height="50"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.3921568627" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Lf0-nY-wQv"/>
@@ -1599,7 +1601,7 @@
                             <constraint firstAttribute="trailing" secondItem="3Z3-Fa-csd" secondAttribute="trailing" id="WSj-jd-7tO"/>
                             <constraint firstItem="RIi-Ag-Sg6" firstAttribute="leading" secondItem="DKF-10-vnU" secondAttribute="leading" constant="30" id="WYL-Ob-KA6"/>
                             <constraint firstItem="ffz-p6-pa4" firstAttribute="top" secondItem="RIi-Ag-Sg6" secondAttribute="bottom" constant="20" id="Xnc-KA-4iS"/>
-                            <constraint firstItem="3Z3-Fa-csd" firstAttribute="top" secondItem="Mtk-8T-MYM" secondAttribute="top" id="b2E-Gn-wcy"/>
+                            <constraint firstItem="3Z3-Fa-csd" firstAttribute="top" secondItem="Mtk-8T-MYM" secondAttribute="top" constant="50" id="b2E-Gn-wcy"/>
                             <constraint firstItem="DKF-10-vnU" firstAttribute="trailing" secondItem="OkO-rs-YqK" secondAttribute="trailing" constant="30" id="ba9-NR-lU4"/>
                             <constraint firstItem="ffz-p6-pa4" firstAttribute="leading" secondItem="DKF-10-vnU" secondAttribute="leading" constant="30" id="hQ0-30-od3"/>
                             <constraint firstItem="RIi-Ag-Sg6" firstAttribute="top" secondItem="OkO-rs-YqK" secondAttribute="bottom" constant="20" id="p8U-Mb-rTp"/>
@@ -1879,13 +1881,13 @@
         <!--Surf Events-->
         <scene sceneID="ASz-MW-Ldu">
             <objects>
-                <tableViewController id="sTs-N8-y7N" sceneMemberID="viewController">
+                <tableViewController id="sTs-N8-y7N" customClass="EventTableViewController" customModule="Swave_iOS_app_ITP342_Final_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="hsX-Ra-ipD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="efP-IN-ypJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="efP-IN-ypJ">
                                 <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="efP-IN-ypJ" id="oZJ-PQ-1GH">
@@ -1900,6 +1902,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Surf Events" id="cqa-kD-CXR"/>
+                    <connections>
+                        <outlet property="tableViewOutlet" destination="hsX-Ra-ipD" id="eNY-sG-Pot"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sF6-gR-j9e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

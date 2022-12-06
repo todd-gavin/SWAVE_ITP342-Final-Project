@@ -86,11 +86,11 @@ class SignInPageController: UIViewController {
                         self.performSegue (withIdentifier: "navigateToHomePage", sender: self)
                     }
                     
-                } else {
+                } else if let error = error as NSError? {
                     
-                    print("Failed to sign in user with error: \(String(describing: error))")
+                    print("Failed to sign in user with error: \(String(describing: error.userInfo["NSLocalizedDescription"] as? String))")
                     
-                    let alert = UIAlertController(title: "Sign In Failed", message: "Email or Password do not match our records. Please try again.", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Sign In Failed", message: "\(String(describing: error.userInfo["NSLocalizedDescription"] as? String)) Please try again.", preferredStyle: .alert)
                     
                     alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
                         NSLog("The \"OK\" alert occured.")
