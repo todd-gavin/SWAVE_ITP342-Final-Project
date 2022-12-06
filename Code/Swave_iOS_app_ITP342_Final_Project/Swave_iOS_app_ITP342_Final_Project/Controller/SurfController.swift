@@ -68,6 +68,12 @@ class SurfController: UIViewController {
     }
     
     
+    @IBAction func createSurfEventClickedAction(_ sender: UIButton) {
+        print("\(#function)")
+        self.performSegue (withIdentifier: "navigateToCreateEvent", sender: self)
+    }
+    
+    
     func convertISOtoReadableTime(time: String) -> String {
         
         let dateFormatter = ISO8601DateFormatter()

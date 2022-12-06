@@ -53,6 +53,9 @@
 		3749F2F3293E81BB00D7D258 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3749F2F2293E81BB00D7D258 /* MapViewController.swift */; };
 		3749F2F4293E81BB00D7D258 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3749F2F2293E81BB00D7D258 /* MapViewController.swift */; };
 		3749F2F5293E81BB00D7D258 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3749F2F2293E81BB00D7D258 /* MapViewController.swift */; };
+		3749F2F7293EA64A00D7D258 /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3749F2F6293EA64A00D7D258 /* EventController.swift */; };
+		3749F2F8293EA64A00D7D258 /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3749F2F6293EA64A00D7D258 /* EventController.swift */; };
+		3749F2F9293EA64A00D7D258 /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3749F2F6293EA64A00D7D258 /* EventController.swift */; };
 		375F0F2E29384B470095F278 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375F0F2D29384B470095F278 /* HomeTabBarController.swift */; };
 		375F0F2F29384B470095F278 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375F0F2D29384B470095F278 /* HomeTabBarController.swift */; };
 		375F0F3029384B470095F278 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375F0F2D29384B470095F278 /* HomeTabBarController.swift */; };
@@ -101,6 +104,7 @@
 		3743AF7429381A9700D59298 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		3743AF7829381CC500D59298 /* SurfController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfController.swift; sourceTree = "<group>"; };
 		3749F2F2293E81BB00D7D258 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3749F2F6293EA64A00D7D258 /* EventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
 		375F0F2D29384B470095F278 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeTabBarController.swift; path = Swave_iOS_app_ITP342_Final_Project/Controller/HomeTabBarController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -205,6 +209,7 @@
 				3743AF7429381A9700D59298 /* EditProfileController.swift */,
 				3743AF7829381CC500D59298 /* SurfController.swift */,
 				3749F2F2293E81BB00D7D258 /* MapViewController.swift */,
+				3749F2F6293EA64A00D7D258 /* EventController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 				3743AF7529381A9700D59298 /* EditProfileController.swift in Sources */,
 				37300336293C27B300FDCE51 /* UserModel.swift in Sources */,
 				3743AF33292F3D9400D59298 /* AppDelegate.swift in Sources */,
+				3749F2F7293EA64A00D7D258 /* EventController.swift in Sources */,
 				3743AF35292F3D9400D59298 /* SceneDelegate.swift in Sources */,
 				3743AF712936E3DA00D59298 /* ProfileController.swift in Sources */,
 				3730033E293D5E5500FDCE51 /* SurfForecastModel.swift in Sources */,
@@ -388,6 +394,7 @@
 				3743AF4D292F3D9600D59298 /* Swave_iOS_app_ITP342_Final_ProjectTests.swift in Sources */,
 				3743AF7629381A9700D59298 /* EditProfileController.swift in Sources */,
 				3743AF6A2935A38800D59298 /* CreateProfileController.swift in Sources */,
+				3749F2F8293EA64A00D7D258 /* EventController.swift in Sources */,
 				3730033B293D5D1300FDCE51 /* SurfForecast.swift in Sources */,
 				37300337293C27B300FDCE51 /* UserModel.swift in Sources */,
 				3743AF6E2935AFD800D59298 /* SignUpController.swift in Sources */,
@@ -415,6 +422,7 @@
 				3743AF57292F3D9600D59298 /* Swave_iOS_app_ITP342_Final_ProjectUITests.swift in Sources */,
 				3743AF6F2935AFD800D59298 /* SignUpController.swift in Sources */,
 				37300334293C26AA00FDCE51 /* User.swift in Sources */,
+				3749F2F9293EA64A00D7D258 /* EventController.swift in Sources */,
 				3743AF7729381A9700D59298 /* EditProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,6 +586,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Swave_iOS_app_ITP342_Final_Project/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SWAVE;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "We need it to create surf events.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need it to pull the accurate surf forecast data.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need it to pull the accurate surf forecast data.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -612,6 +621,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Swave_iOS_app_ITP342_Final_Project/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SWAVE;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "We need it to create surf events.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need it to pull the accurate surf forecast data.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need it to pull the accurate surf forecast data.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
