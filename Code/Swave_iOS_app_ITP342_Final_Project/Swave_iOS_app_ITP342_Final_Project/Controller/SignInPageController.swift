@@ -16,13 +16,13 @@ class SignInPageController: UIViewController {
     @IBOutlet weak var emailOutlet: UITextField!
     @IBOutlet weak var passwordOutlet: UITextField!
     
-//    Use viewWillAppear function to pull the latest data from firebase
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("\(#function) Sign In Page")
     }
     
+    // This function pulls the latest user profile data from firebase when the current user has signed in and has been authenticated
+    // This data than populaties the userModel singleton to share data across VCs
     func pullFromFirebase_UpdateUserModelSingleton() -> Bool {
         
         if let user = Auth.auth().currentUser {
@@ -57,7 +57,8 @@ class SignInPageController: UIViewController {
         }
     }
     
-    
+    // This function occurs when the user clicks sign in
+    // The textFileds are validated before they are sent to firebase to be authenticated
     @IBAction func signInClickedAction(_ sender: UIButton) {
         print("\(#function)")
 
@@ -109,15 +110,6 @@ class SignInPageController: UIViewController {
         print("\(#function) pt1")
         self.performSegue (withIdentifier: "navigateToSignUp", sender: self)
     }
-   
-    //        let ref = Firestore.firestore().collection("users").document("testUser3")
-            // setData rewrites everything
-    //        ref.setData(["hello": "everyone"])
-            // updateData just updates a specific field
-            // ref.updateData(["field1": "c"])
-    //
-    //        // create document id with push keys
-    //        Firestore.firestore().collection("users").addDocument(data: ["full_name": "Sean"])
 
 }
 

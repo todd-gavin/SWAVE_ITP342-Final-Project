@@ -131,9 +131,6 @@ class EventController: UIViewController {
                     let end = startEndDateTimes[1]
                     let eventInfo = self.getEventInfo()
                     self.createCalendarEvent(eventInfo: eventInfo, startDate: start, endDate: end)
-//                    let events = self.readCalendarEvents()
-//                    print("**** Events: \(events)")
-//                    self.printCalendarEvents(events: events)
                 }
                 
             } else {
@@ -199,28 +196,6 @@ class EventController: UIViewController {
         }
     }
 
-//    func readCalendarEvents() -> [EKEvent] {
-//        print("\(#function)")
-//        let calendars = eventStore.calendars(for: .event)
-//        let startDate = Date()
-//        let endDate = Date() + 86400 // 24 hours
-//        let predicate = eventStore.predicateForEvents(withStart: startDate, end: endDate, calendars: calendars)
-//
-//        return eventStore.events(matching: predicate)
-//    }
-//
-//    func printCalendarEvents(events: [EKEvent]) {
-//        print("\(#function)")
-//        for event in events {
-//            print("\n\nEvent Title: \(String(describing: event.title))")
-//            print("Start Date: \(String(describing: event.startDate))")
-//            print("End Date: \(String(describing: event.endDate))")
-//            print("Location: \(String(describing: event.location))")
-//            print("Notes: \(String(describing: event.notes))")
-//        }
-//
-//    }
-
     func updateCalendarEvent(event: EKEvent) {
         print("\(#function)")
         event.title = "Updated Meeting with John"
@@ -230,7 +205,7 @@ class EventController: UIViewController {
         do {
             try eventStore.save(event, span: .thisEvent)
         } catch {
-            // Handle error
+            print("Error updating calendar event: \(error)")
         }
     }
 
@@ -239,7 +214,7 @@ class EventController: UIViewController {
         do {
             try eventStore.remove(event, span: .thisEvent)
         } catch {
-            // Handle error
+            print("Error deleting calendar event: \(error)")
         }
     }
 
